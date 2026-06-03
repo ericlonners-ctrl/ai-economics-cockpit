@@ -13,6 +13,7 @@ from .config import DB_PATH, PARQUET_DIR, PROCESSED_DIR, PROJECT_ROOT, ensure_di
 from .db import connect, initialize_database, replace_table
 from .ingest.manual import ensure_manual_templates, load_manual_data
 from .ingest.official_pricing import ingest_official_pricing
+from .ingest.sec_filings import ingest_sec_companyfacts
 from .scoring.score import score_metrics
 from .validate.rules import validate_metric_rows
 from .validate.schemas import validate_metric_catalog, validate_source_registry
@@ -29,7 +30,8 @@ def main() -> None:
     sub.add_parser("validate")
     serve_parser = sub.add_parser("serve")
     serve_parser.add_argument("--port", type=int, default=8765)
-    sub.add_parser("all")
+    all_parser = sub.add_parser("all")
+    all_parser.add_argument("--online", action="store_true", help="Include network-backed official pricing and SEC companyfacts ingestion.")
     args = parser.parse_args()
 
     if args.command == "init":
@@ -43,7 +45,7 @@ def main() -> None:
     elif args.command == "serve":
         cmd_serve(args.port)
     elif args.command == "all":
-        cmd_all()
+        cmd_all(online=args.online)
 
 
 def cmd_init() -> None:
@@ -79,6 +81,11 @@ def cmd_ingest(manual: bool = False, sources: str = "") -> list[dict]:
         warning_text.extend(warnings)
     if "official_pricing" in sources.split(","):
         metrics, raw, warnings = ingest_official_pricing()
+        metric_frames.append(metrics)
+        raw_frames.append(raw)
+        warning_text.extend(warnings)
+    if "sec_filings" in sources.split(","):
+        metrics, raw, warnings = ingest_sec_companyfacts()
         metric_frames.append(metrics)
         raw_frames.append(raw)
         warning_text.extend(warnings)
@@ -138,15 +145,16 @@ def cmd_validate() -> list[str]:
     return warnings
 
 
-def cmd_all() -> None:
+def cmd_all(online: bool = False) -> None:
+    ingest_sources = "official_pricing,sec_filings" if online else ""
     commands = [
         "python -m ai_economics_cockpit init",
-        "python -m ai_economics_cockpit ingest --manual",
+        f"python -m ai_economics_cockpit ingest --manual{' --sources official_pricing,sec_filings' if online else ''}",
         "python -m ai_economics_cockpit build",
         "python -m ai_economics_cockpit validate",
     ]
     cmd_init()
-    ingest_warnings = cmd_ingest(manual=True)
+    ingest_warnings = cmd_ingest(manual=True, sources=ingest_sources)
     build_warnings = cmd_build(extra_warnings=ingest_warnings)
     try:
         cmd_validate()

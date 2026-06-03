@@ -28,38 +28,38 @@ def score_metrics(observations: pd.DataFrame, asof_date: str | None = None) -> t
             if metric.get("required"):
                 warnings.append(warn("missing_required_metric", metric_id, metric["pillar"], "Required metric is missing."))
             continue
-        obs = found.iloc[0].to_dict()
-        obs_date = pd.Timestamp(obs["observation_date"]).date()
-        age_days = (asof - obs_date).days
-        stale = age_days > int(metric.get("max_stale_days", 75))
-        if stale:
-            warnings.append(warn("stale_metric", metric_id, metric["pillar"], f"Metric is stale: {age_days} days old."))
-        raw_score = metric_stress_score(
-            float(obs["value"]),
-            metric["directionality"],
-            float(metric["green_threshold"]),
-            float(metric["amber_threshold"]),
-            float(metric["red_threshold"]),
-        )
-        c_weight = confidence_weight(obs["confidence_grade"])
-        rows.append(
-            {
-                **obs,
-                "metric_name": metric["metric_name"],
-                "pillar": metric["pillar"],
-                "directionality": metric["directionality"],
-                "green_threshold": metric["green_threshold"],
-                "amber_threshold": metric["amber_threshold"],
-                "red_threshold": metric["red_threshold"],
-                "metric_weight": float(metric["weight"]),
-                "required": bool(metric.get("required", False)),
-                "raw_score": round(raw_score, 4),
-                "confidence_weight": c_weight,
-                "confidence_adjusted_score": round(raw_score * c_weight, 4),
-                "age_days": age_days,
-                "stale": stale,
-            }
-        )
+        for obs in found.to_dict("records"):
+            obs_date = pd.Timestamp(obs["observation_date"]).date()
+            age_days = (asof - obs_date).days
+            stale = age_days > int(metric.get("max_stale_days", 75))
+            if stale:
+                warnings.append(warn("stale_metric", metric_id, metric["pillar"], f"{obs.get('entity')} metric is stale: {age_days} days old."))
+            raw_score = metric_stress_score(
+                float(obs["value"]),
+                metric["directionality"],
+                float(metric["green_threshold"]),
+                float(metric["amber_threshold"]),
+                float(metric["red_threshold"]),
+            )
+            c_weight = confidence_weight(obs["confidence_grade"])
+            rows.append(
+                {
+                    **obs,
+                    "metric_name": metric["metric_name"],
+                    "pillar": metric["pillar"],
+                    "directionality": metric["directionality"],
+                    "green_threshold": metric["green_threshold"],
+                    "amber_threshold": metric["amber_threshold"],
+                    "red_threshold": metric["red_threshold"],
+                    "metric_weight": float(metric["weight"]),
+                    "required": bool(metric.get("required", False)),
+                    "raw_score": round(raw_score, 4),
+                    "confidence_weight": c_weight,
+                    "confidence_adjusted_score": round(raw_score * c_weight, 4),
+                    "age_days": age_days,
+                    "stale": stale,
+                }
+            )
     metric_scores = pd.DataFrame(rows)
     pillar_scores = build_pillar_scores(metric_scores, catalog, warnings)
     stress_index = build_stress_index(pillar_scores, pillar_weights, asof)
@@ -70,7 +70,7 @@ def latest_observations(df: pd.DataFrame) -> pd.DataFrame:
     if df.empty:
         return df
     ordered = df.sort_values(["metric_id", "observation_date", "entity", "source_id"])
-    return ordered.groupby("metric_id", as_index=False).tail(1).sort_values("metric_id").reset_index(drop=True)
+    return ordered.groupby(["metric_id", "entity"], as_index=False).tail(1).sort_values(["metric_id", "entity"]).reset_index(drop=True)
 
 
 def build_pillar_scores(metric_scores: pd.DataFrame, catalog: pd.DataFrame, warnings: list[dict]) -> pd.DataFrame:
@@ -141,4 +141,3 @@ def build_stress_index(pillar_scores: pd.DataFrame, pillar_weights: dict, asof: 
 
 def warn(kind: str, metric_id: str, pillar: str, message: str) -> dict:
     return {"type": kind, "metric_id": metric_id, "pillar": pillar, "message": message}
-

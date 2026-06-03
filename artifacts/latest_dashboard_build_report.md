@@ -11,7 +11,7 @@
 ## Commands Run
 
 - `python -m ai_economics_cockpit init`
-- `python -m ai_economics_cockpit ingest --manual`
+- `python -m ai_economics_cockpit ingest --manual --sources official_pricing,sec_filings`
 - `python -m ai_economics_cockpit build`
 - `python -m ai_economics_cockpit validate`
 
@@ -26,10 +26,10 @@ Manual sample data is ingested for enterprise ROI, model-lab financials, hypersc
 ## Missing Data / Warnings
 
 - missing_required_metric: enterprise_roi ai_spend_to_it_budget - Required metric is missing.
-- missing_required_metric: token_cost openai_weighted_token_price - Required metric is missing.
-- missing_required_metric: token_cost provider_token_price_index - Required metric is missing.
+- stale_metric: hyperscaler_capex capex - Oracle metric is stale: 276 days old.
+- stale_metric: hyperscaler_capex capex_to_operating_cash_flow - Oracle metric is stale: 276 days old.
+- stale_metric: hyperscaler_capex capex_to_revenue - Oracle metric is stale: 276 days old.
 - low_confidence_pillar_dominance: enterprise_roi  - C/D metrics account for more than half of available pillar weight.
-- low_confidence_pillar_dominance: hyperscaler_capex  - C/D metrics account for more than half of available pillar weight.
 - low_confidence_pillar_dominance: infra_financing  - C/D metrics account for more than half of available pillar weight.
 - low_confidence_pillar_dominance: model_lab  - C/D metrics account for more than half of available pillar weight.
 

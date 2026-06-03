@@ -34,7 +34,7 @@ jobs:
           python -m pip install -e ".[dev]"
 
       - name: Build cockpit
-        run: python -m ai_economics_cockpit all
+        run: python -m ai_economics_cockpit all --online
 
       - name: Test
         run: pytest

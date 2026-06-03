@@ -1,0 +1,64 @@
+asof_date: "2026-06-03"
+notes: "Official-source rate card curated for deterministic ingestion. Refresh when official pricing pages change."
+models:
+  - provider: OpenAI
+    model: gpt-5.5
+    source_id: openai_developer_pricing_docs
+    source_url: https://developers.openai.com/api/docs/pricing
+    confidence_grade: A
+    input_usd_per_mtok: 5.00
+    cached_input_usd_per_mtok: 0.50
+    output_usd_per_mtok: 30.00
+    context_tier: short
+    notes: "OpenAI flagship standard short-context price per 1M tokens."
+  - provider: OpenAI
+    model: gpt-5.4
+    source_id: openai_developer_pricing_docs
+    source_url: https://developers.openai.com/api/docs/pricing
+    confidence_grade: A
+    input_usd_per_mtok: 2.50
+    cached_input_usd_per_mtok: 0.25
+    output_usd_per_mtok: 15.00
+    context_tier: short
+    notes: "OpenAI flagship standard short-context price per 1M tokens."
+  - provider: Anthropic
+    model: Claude Opus 4.8
+    source_id: anthropic_pricing
+    source_url: https://platform.claude.com/docs/en/about-claude/pricing
+    confidence_grade: A
+    input_usd_per_mtok: 5.00
+    cached_input_usd_per_mtok: 0.50
+    output_usd_per_mtok: 25.00
+    context_tier: standard
+    notes: "Anthropic base input, cache hit, and output price per MTok."
+  - provider: Anthropic
+    model: Claude Sonnet 4.6
+    source_id: anthropic_pricing
+    source_url: https://platform.claude.com/docs/en/about-claude/pricing
+    confidence_grade: A
+    input_usd_per_mtok: 3.00
+    cached_input_usd_per_mtok: 0.30
+    output_usd_per_mtok: 15.00
+    context_tier: standard
+    notes: "Anthropic base input, cache hit, and output price per MTok."
+  - provider: Google
+    model: Gemini 3.1 Pro
+    source_id: google_gemini_pricing
+    source_url: https://ai.google.dev/gemini-api/docs/pricing
+    confidence_grade: A
+    input_usd_per_mtok: 1.25
+    cached_input_usd_per_mtok: 0.125
+    output_usd_per_mtok: 10.00
+    context_tier: "<=200k"
+    notes: "Google Gemini paid-tier price for prompts <=200k tokens."
+  - provider: Google
+    model: Gemini 3 Flash
+    source_id: google_gemini_pricing
+    source_url: https://ai.google.dev/gemini-api/docs/pricing
+    confidence_grade: A
+    input_usd_per_mtok: 0.30
+    cached_input_usd_per_mtok: 0.03
+    output_usd_per_mtok: 2.50
+    context_tier: standard
+    notes: "Google Gemini paid-tier text/image/video price per 1M tokens."
+

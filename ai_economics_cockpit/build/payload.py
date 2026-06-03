@@ -19,6 +19,17 @@ def build_payload(
 ) -> dict[str, Any]:
     output_path = output_path or PROCESSED_DIR / "dashboard_payload.json"
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    warnings = list(warnings)
+    sample_count = sample_observation_count(metric_scores, event_log)
+    if sample_count:
+        warnings.append(
+            {
+                "type": "sample_data_present",
+                "metric_id": "",
+                "pillar": "",
+                "message": f"{sample_count} sample or placeholder observations are present; replace with source-backed evidence before treating scores as decision-grade.",
+            }
+        )
     index = stress_index.iloc[0].to_dict()
     asof = index["asof_date"]
     indicators = evaluate_indicators(metric_scores)
@@ -38,6 +49,7 @@ def build_payload(
             "data_coverage": index.get("data_coverage", 0),
             "average_confidence": index.get("average_confidence", 0),
             "low_confidence_metric_count": int(metric_scores["confidence_grade"].isin(["C", "D"]).sum()) if not metric_scores.empty else 0,
+            "sample_observation_count": sample_count,
         },
         "falsification_indicators": indicators["falsification_indicators"],
         "validation_indicators": indicators["validation_indicators"],
@@ -59,6 +71,25 @@ def build_time_series(metric_scores: pd.DataFrame) -> dict[str, list[dict[str, A
     return out
 
 
+def sample_observation_count(metric_scores: pd.DataFrame, event_log: pd.DataFrame) -> int:
+    count = 0
+    if not metric_scores.empty:
+        text = (
+            metric_scores.get("notes", pd.Series("", index=metric_scores.index)).fillna("").astype(str)
+            + " "
+            + metric_scores.get("entity", pd.Series("", index=metric_scores.index)).fillna("").astype(str)
+        ).str.lower()
+        count += int(text.str.contains("sample|placeholder").sum())
+    if not event_log.empty:
+        text = (
+            event_log.get("notes", pd.Series("", index=event_log.index)).fillna("").astype(str)
+            + " "
+            + event_log.get("summary", pd.Series("", index=event_log.index)).fillna("").astype(str)
+        ).str.lower()
+        count += int(text.str.contains("sample|placeholder").sum())
+    return count
+
+
 def evaluate_indicators(metric_scores: pd.DataFrame) -> dict[str, list[dict]]:
     cfg = load_falsification_config()
     latest = {r["metric_id"]: r for r in metric_scores.to_dict("records")} if not metric_scores.empty else {}
@@ -74,4 +105,3 @@ def evaluate_indicators(metric_scores: pd.DataFrame) -> dict[str, list[dict]]:
                 triggered = value < float(ind["threshold"])
             result[key].append({**ind, "latest_value": value, "triggered": triggered})
     return result
-

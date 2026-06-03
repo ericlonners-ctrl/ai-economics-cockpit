@@ -1,0 +1,26 @@
+companies:
+  - entity: Microsoft
+    cik: "0000789019"
+    source_id: microsoft_sec_filings
+  - entity: Amazon
+    cik: "0001018724"
+    source_id: amazon_sec_filings
+  - entity: Alphabet
+    cik: "0001652044"
+    source_id: alphabet_sec_filings
+  - entity: Meta
+    cik: "0001326801"
+    source_id: meta_sec_filings
+  - entity: Oracle
+    cik: "0001341439"
+    source_id: oracle_sec_filings
+  - entity: NVIDIA
+    cik: "0001045810"
+    source_id: nvidia_sec_filings
+  - entity: Broadcom
+    cik: "0001730168"
+    source_id: broadcom_sec_filings
+  - entity: AMD
+    cik: "0000002488"
+    source_id: amd_sec_filings
+

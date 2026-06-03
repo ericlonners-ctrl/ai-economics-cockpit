@@ -50,13 +50,18 @@ python -m ai_economics_cockpit build
 python -m ai_economics_cockpit validate
 python -m ai_economics_cockpit serve
 python -m ai_economics_cockpit all
+python -m ai_economics_cockpit all --online
 ```
 
 The dashboard is at `dashboard/index.html` and loads `../data/processed/dashboard_payload.json`.
 
+Use `all --online` for the web-published build. It adds official pricing page checks, curated official token price-card ingestion, and SEC companyfacts ingestion for capex, operating cash flow, and revenue ratios.
+
 ## Manual Evidence
 
 Manual CSV templates live in `data/manual/`. Every row must include source URL, source name, confidence grade, and notes. Estimates must set `is_estimate=true` and include `estimate_method`.
+
+Rows containing sample or placeholder language are counted in the payload and shown as dashboard warnings.
 
 Event evidence belongs in `data/manual/ai_budget_events.csv`. Non-hard-data observations should be represented as event-log rows with severity, thesis impact, source, and confidence.
 

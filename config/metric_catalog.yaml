@@ -591,8 +591,8 @@
       "transform": "level",
       "weight": 1.0,
       "required": false,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -608,8 +608,8 @@
       "transform": "level",
       "weight": 1,
       "required": true,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -625,8 +625,8 @@
       "transform": "level",
       "weight": 1.0,
       "required": false,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -642,8 +642,8 @@
       "transform": "level",
       "weight": 1.0,
       "required": false,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -659,8 +659,8 @@
       "transform": "level",
       "weight": 1.0,
       "required": false,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -676,8 +676,8 @@
       "transform": "level",
       "weight": 1,
       "required": true,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -693,8 +693,8 @@
       "transform": "level",
       "weight": 1,
       "required": true,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -710,8 +710,8 @@
       "transform": "level",
       "weight": 1.0,
       "required": false,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -727,8 +727,8 @@
       "transform": "level",
       "weight": 1.0,
       "required": false,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {
@@ -744,8 +744,8 @@
       "transform": "level",
       "weight": 1.0,
       "required": false,
-      "frequency": "monthly",
-      "max_stale_days": 75,
+      "frequency": "quarterly",
+      "max_stale_days": 140,
       "data_quality_rule": "source_id_confidence_required"
     },
     {

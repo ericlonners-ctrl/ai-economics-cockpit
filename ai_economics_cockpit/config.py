@@ -36,7 +36,14 @@ def load_falsification_config() -> dict[str, Any]:
     return load_yaml(CONFIG_DIR / "falsification.yaml")
 
 
+def load_token_pricing_config() -> dict[str, Any]:
+    return load_yaml(CONFIG_DIR / "token_pricing.yaml")
+
+
+def load_sec_companies_config() -> dict[str, Any]:
+    return load_yaml(CONFIG_DIR / "sec_companies.yaml")
+
+
 def ensure_dirs() -> None:
     for path in [DATA_DIR, MANUAL_DIR, PROCESSED_DIR, PARQUET_DIR, DASHBOARD_DIR, DASHBOARD_DIR / "assets", ARTIFACTS_DIR]:
         path.mkdir(parents=True, exist_ok=True)
-
