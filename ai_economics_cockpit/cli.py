@@ -158,7 +158,7 @@ def cmd_all(online: bool = False) -> None:
     build_warnings = cmd_build(extra_warnings=ingest_warnings)
     try:
         cmd_validate()
-        test_result = "Validation passed. The GitHub Pages workflow runs `pytest` after this build step; locally run `.venv/bin/pytest` for the full suite."
+        test_result = "Validation passed. The GitHub Pages workflow runs `pytest` before the online publish build; locally run `.venv/bin/pytest` for the full suite."
     except SystemExit:
         test_result = "Validation failed."
         raise
