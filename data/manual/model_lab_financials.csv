@@ -1,0 +1,4 @@
+date,entity,metric_id,event_type,value,summary,unit,source_url,source_name,confidence_grade,is_estimate,estimate_method,thesis_impact,severity,notes
+2026-05-10,Model lab sample,model_lab_gross_margin,,28,,%,manual_model_lab_financials,manual_model_lab_financials,C,False,,,,Reported/private estimate sample; not official.
+2026-05-10,Model lab sample,cash_burn_to_revenue,,85,,%,manual_model_lab_financials,manual_model_lab_financials,C,True,manual reported estimate,,,Reported/private estimate sample; not official.
+2026-05-10,Model lab sample,model_lab_gaap_operating_margin,,-45,,%,manual_model_lab_financials,manual_model_lab_financials,C,True,manual reported estimate,,,Reported/private estimate sample; not official.

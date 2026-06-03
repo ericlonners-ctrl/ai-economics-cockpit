@@ -1,0 +1,4 @@
+date,entity,metric_id,event_type,value,summary,unit,source_url,source_name,confidence_grade,is_estimate,estimate_method,thesis_impact,severity,notes
+2026-03-31,Hyperscaler sample,capex_to_operating_cash_flow,,52,,%,manual_capex_estimates,manual_capex_estimates,C,True,manual estimate,,,Manual capex estimate sample.
+2026-03-31,Hyperscaler sample,incremental_ai_revenue_to_cumulative_ai_capex,,7,,%,manual_capex_estimates,manual_capex_estimates,C,True,manual estimate,,,Manual capex productivity estimate sample.
+2026-03-31,Hyperscaler sample,incremental_ai_gross_profit_to_cumulative_ai_capex,,4,,%,manual_capex_estimates,manual_capex_estimates,C,True,manual estimate,,,Manual capex productivity estimate sample.

@@ -1,0 +1,58 @@
+falsification_indicators:
+  - id: measured_roi_coverage_rising
+    metric_id: measured_roi_coverage
+    condition: above
+    threshold: 70
+    summary: "Measured ROI coverage above 70% would weaken the weak-ROI thesis."
+  - id: measured_ebit_impact_rising
+    metric_id: measured_ebit_impact_coverage
+    condition: above
+    threshold: 50
+    summary: "Measured EBIT or cash-flow impact above 50% would weaken the thesis."
+  - id: cost_per_output_falling
+    metric_id: cost_per_accepted_output
+    condition: below
+    threshold: 8
+    summary: "Falling cost per accepted output would weaken hidden-cost stress."
+  - id: token_prices_falling_fast
+    metric_id: provider_token_price_index
+    condition: below
+    threshold: 85
+    summary: "Provider token price index falling faster than task intensity would weaken the thesis."
+  - id: model_lab_margins_improving
+    metric_id: model_lab_gross_margin
+    condition: above
+    threshold: 55
+    summary: "Improving GAAP gross margins at model labs would weaken cash-burn stress."
+  - id: burn_to_revenue_falling
+    metric_id: cash_burn_to_revenue
+    condition: below
+    threshold: 30
+    summary: "Cash burn falling below 30% of revenue would weaken the thesis."
+  - id: capex_to_ocf_stabilising
+    metric_id: capex_to_operating_cash_flow
+    condition: below
+    threshold: 35
+    summary: "Capex to operating cash flow stabilising below 35% would weaken capex-overbuild stress."
+  - id: ai_gross_profit_productivity_rising
+    metric_id: incremental_ai_gross_profit_to_cumulative_ai_capex
+    condition: above
+    threshold: 15
+    summary: "Rising incremental AI gross profit per cumulative AI capex would falsify overbuild risk."
+validation_indicators:
+  - id: budget_caps_rising
+    metric_id: enterprise_usage_cap_event_count
+    condition: above
+    threshold: 3
+    summary: "Rising enterprise usage-cap events validate budget shock."
+  - id: agentic_cost_high
+    metric_id: estimated_cost_per_agentic_task
+    condition: above
+    threshold: 20
+    summary: "High cost per agentic task validates hidden token-cost stress."
+  - id: capex_productivity_weak
+    metric_id: incremental_ai_revenue_to_cumulative_ai_capex
+    condition: below
+    threshold: 8
+    summary: "Weak incremental AI revenue per cumulative AI capex validates capex productivity stress."
+

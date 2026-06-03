@@ -1,0 +1,2 @@
+date,entity,metric_id,event_type,value,summary,unit,source_url,source_name,confidence_grade,is_estimate,estimate_method,thesis_impact,severity,notes
+2026-05-20,Enterprise sample,enterprise_roi:usage_cap,usage_cap,,Manual placeholder event for budget-shock monitoring.,,manual_ai_budget_events,manual_ai_budget_events,C,False,,validates,3,Sample AI usage caps after budget pressure

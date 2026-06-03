@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Economics Cockpit</title>
+  <link rel="stylesheet" href="assets/dashboard.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>AI Economics Cockpit</h1>
+      <p>Bearish AI-economics thesis monitor: ROI, token costs, lab P&amp;L, capex productivity, infrastructure and financing risk.</p>
+    </div>
+    <div class="meta">
+      <span id="asof">As of ...</span>
+      <span id="coverage">Coverage ...</span>
+      <span id="confidence">Confidence ...</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="score-band">
+      <div class="index-card">
+        <div class="label">AI Economic Stress Index</div>
+        <div id="stressScore" class="big-score">--</div>
+        <div id="stressInterpretation" class="interpretation">Loading</div>
+      </div>
+      <div id="pillarCards" class="pillar-grid"></div>
+    </section>
+
+    <section class="split">
+      <article>
+        <h2>Metric Heatmap</h2>
+        <div id="heatmap" class="heatmap"></div>
+      </article>
+      <article>
+        <h2>Warnings</h2>
+        <div id="warnings" class="warning-list"></div>
+      </article>
+    </section>
+
+    <section>
+      <h2>Latest Metrics</h2>
+      <div class="table-wrap">
+        <table id="metricTable"></table>
+      </div>
+    </section>
+
+    <section class="split">
+      <article>
+        <h2>What Would Falsify The Thesis?</h2>
+        <div id="falsification" class="indicator-list"></div>
+      </article>
+      <article>
+        <h2>What Would Validate The Thesis?</h2>
+        <div id="validation" class="indicator-list"></div>
+      </article>
+    </section>
+
+    <section>
+      <h2>Latest Evidence Log</h2>
+      <div class="table-wrap">
+        <table id="eventTable"></table>
+      </div>
+    </section>
+
+    <section class="split">
+      <article>
+        <h2>Time-Series Snapshot</h2>
+        <canvas id="seriesChart" width="900" height="280"></canvas>
+      </article>
+      <article>
+        <h2>Source Confidence</h2>
+        <div class="table-wrap">
+          <table id="sourceTable"></table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="assets/dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+date,entity,metric_id,event_type,value,summary,unit,source_url,source_name,confidence_grade,is_estimate,estimate_method,thesis_impact,severity,notes
+2026-05-01,GPU rental sample,gpu_rental_rate_index,,78,,index,manual_gpu_rental_rates,manual_gpu_rental_rates,C,False,,,,Manual rental proxy sample.

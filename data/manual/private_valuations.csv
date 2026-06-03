@@ -1,0 +1,4 @@
+date,entity,metric_id,event_type,value,summary,unit,source_url,source_name,confidence_grade,is_estimate,estimate_method,thesis_impact,severity,notes
+2026-05-01,Private AI sample,private_valuation_to_revenue,,35,,x,manual_private_valuations,manual_private_valuations,C,False,,,,Manual valuation multiple sample.
+2026-05-01,Private AI sample,external_financing_dependence,,65,,index,manual_private_valuations,manual_private_valuations,C,False,,,,Manual financing dependence sample.
+2026-05-01,Private AI sample,ipo_readiness_score,,45,,score,manual_private_valuations,manual_private_valuations,C,False,,,,Manual IPO readiness sample.

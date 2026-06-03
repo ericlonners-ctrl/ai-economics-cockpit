@@ -1,0 +1,255 @@
+sources:
+  - source_id: openai_api_pricing
+    source_name: OpenAI API pricing
+    source_type: official_pricing
+    url: https://openai.com/api/pricing/
+    entity: OpenAI
+    pillar: token_cost
+    refresh_frequency: weekly
+    confidence_grade: A
+    parser_type: html_table
+    active: true
+    notes: Official API pricing page; parser is best-effort and failures become warnings.
+  - source_id: openai_developer_pricing_docs
+    source_name: OpenAI developer pricing docs
+    source_type: official_pricing
+    url: https://platform.openai.com/docs/pricing
+    entity: OpenAI
+    pillar: token_cost
+    refresh_frequency: weekly
+    confidence_grade: A
+    parser_type: html_table
+    active: true
+    notes: Official developer docs pricing reference.
+  - source_id: anthropic_pricing
+    source_name: Anthropic Claude API pricing
+    source_type: official_pricing
+    url: https://www.anthropic.com/pricing
+    entity: Anthropic
+    pillar: token_cost
+    refresh_frequency: weekly
+    confidence_grade: A
+    parser_type: html_table
+    active: true
+    notes: Official Anthropic pricing.
+  - source_id: google_gemini_pricing
+    source_name: Google Gemini API pricing
+    source_type: official_pricing
+    url: https://ai.google.dev/gemini-api/docs/pricing
+    entity: Google
+    pillar: token_cost
+    refresh_frequency: weekly
+    confidence_grade: A
+    parser_type: html_table
+    active: true
+    notes: Official Gemini API pricing.
+  - source_id: vertex_ai_pricing
+    source_name: Google Cloud Vertex AI pricing
+    source_type: official_pricing
+    url: https://cloud.google.com/vertex-ai/generative-ai/pricing
+    entity: Google
+    pillar: token_cost
+    refresh_frequency: weekly
+    confidence_grade: A
+    parser_type: html_table
+    active: true
+    notes: Official Google Cloud pricing.
+  - source_id: azure_openai_pricing
+    source_name: Azure OpenAI pricing
+    source_type: official_pricing
+    url: https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/
+    entity: Microsoft
+    pillar: token_cost
+    refresh_frequency: weekly
+    confidence_grade: A
+    parser_type: html_table
+    active: true
+    notes: Official Azure pricing page.
+  - source_id: aws_bedrock_pricing
+    source_name: AWS Bedrock pricing
+    source_type: official_pricing
+    url: https://aws.amazon.com/bedrock/pricing/
+    entity: Amazon
+    pillar: token_cost
+    refresh_frequency: weekly
+    confidence_grade: A
+    parser_type: html_table
+    active: true
+    notes: Official AWS Bedrock pricing.
+  - source_id: microsoft_sec_filings
+    source_name: Microsoft SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=789019
+    entity: Microsoft
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: amazon_sec_filings
+    source_name: Amazon SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=1018724
+    entity: Amazon
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: alphabet_sec_filings
+    source_name: Alphabet SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=1652044
+    entity: Alphabet
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: meta_sec_filings
+    source_name: Meta SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=1326801
+    entity: Meta
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: oracle_sec_filings
+    source_name: Oracle SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=1341439
+    entity: Oracle
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: nvidia_sec_filings
+    source_name: NVIDIA SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=1045810
+    entity: NVIDIA
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: broadcom_sec_filings
+    source_name: Broadcom SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=1730168
+    entity: Broadcom
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: amd_sec_filings
+    source_name: AMD SEC filings
+    source_type: sec_filing
+    url: https://www.sec.gov/edgar/browse/?CIK=2488
+    entity: AMD
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: A
+    parser_type: sec_xbrl
+    active: true
+    notes: Extensible SEC importer placeholder.
+  - source_id: iea_data_centre_electricity
+    source_name: IEA data-centre electricity reports
+    source_type: analyst_report
+    url: https://www.iea.org/
+    entity: Infrastructure
+    pillar: infra_financing
+    refresh_frequency: annual
+    confidence_grade: B
+    parser_type: manual_csv
+    active: true
+    notes: Public power-demand context; manually curated for MVP.
+  - source_id: manual_enterprise_roi
+    source_name: Manual enterprise ROI observations
+    source_type: manual
+    url: data/manual/enterprise_roi_observations.csv
+    entity: Enterprise
+    pillar: enterprise_roi
+    refresh_frequency: monthly
+    confidence_grade: C
+    parser_type: manual_csv
+    active: true
+    notes: Manual survey, budget, and implementation observations.
+  - source_id: manual_model_lab_financials
+    source_name: Manual model lab financials
+    source_type: manual
+    url: data/manual/model_lab_financials.csv
+    entity: Model labs
+    pillar: model_lab
+    refresh_frequency: monthly
+    confidence_grade: C
+    parser_type: manual_csv
+    active: true
+    notes: Private-company data must remain C unless official.
+  - source_id: manual_ai_budget_events
+    source_name: Manual AI budget and evidence events
+    source_type: manual
+    url: data/manual/ai_budget_events.csv
+    entity: Cross-entity
+    pillar: enterprise_roi
+    refresh_frequency: weekly
+    confidence_grade: C
+    parser_type: manual_csv
+    active: true
+    notes: Event evidence ledger.
+  - source_id: manual_gpu_resale_prices
+    source_name: Manual GPU resale prices
+    source_type: manual
+    url: data/manual/gpu_resale_prices.csv
+    entity: Infrastructure
+    pillar: infra_financing
+    refresh_frequency: monthly
+    confidence_grade: C
+    parser_type: manual_csv
+    active: true
+    notes: Resale price proxy input.
+  - source_id: manual_gpu_rental_rates
+    source_name: Manual GPU rental rates
+    source_type: manual
+    url: data/manual/gpu_rental_rates.csv
+    entity: Infrastructure
+    pillar: infra_financing
+    refresh_frequency: monthly
+    confidence_grade: C
+    parser_type: manual_csv
+    active: true
+    notes: Rental rate proxy input.
+  - source_id: manual_private_valuations
+    source_name: Manual private valuations
+    source_type: manual
+    url: data/manual/private_valuations.csv
+    entity: Private AI companies
+    pillar: infra_financing
+    refresh_frequency: monthly
+    confidence_grade: C
+    parser_type: manual_csv
+    active: true
+    notes: Funding, valuation, IPO readiness, and secondary discounts.
+  - source_id: manual_capex_estimates
+    source_name: Manual capex estimates
+    source_type: manual
+    url: data/manual/capex_estimates.csv
+    entity: Hyperscalers
+    pillar: hyperscaler_capex
+    refresh_frequency: quarterly
+    confidence_grade: C
+    parser_type: manual_csv
+    active: true
+    notes: Estimates must be flagged with method.
+

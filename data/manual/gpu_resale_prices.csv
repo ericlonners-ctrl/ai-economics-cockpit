@@ -1,0 +1,2 @@
+date,entity,metric_id,event_type,value,summary,unit,source_url,source_name,confidence_grade,is_estimate,estimate_method,thesis_impact,severity,notes
+2026-05-01,GPU resale sample,gpu_resale_price_index,,72,,index,manual_gpu_resale_prices,manual_gpu_resale_prices,C,False,,,,Manual resale proxy sample.

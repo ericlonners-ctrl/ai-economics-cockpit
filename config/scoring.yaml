@@ -1,0 +1,20 @@
+pillar_weights:
+  enterprise_roi: 0.25
+  token_cost: 0.20
+  model_lab: 0.20
+  hyperscaler_capex: 0.20
+  infra_financing: 0.15
+confidence_weights:
+  A: 1.00
+  B: 0.85
+  C: 0.65
+  D: 0.35
+max_stale_days:
+  daily: 14
+  weekly: 35
+  monthly: 75
+  quarterly: 140
+  annual: 460
+  event: 365
+low_confidence_domination_threshold: 0.50
+
