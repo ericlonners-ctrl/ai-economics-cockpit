@@ -7,6 +7,6 @@ __pycache__/
 data/ai_economics.duckdb
 data/processed/*.parquet
 data/processed/parquet/
-data/processed/dashboard_payload.json
 _site/
 
+.vercel

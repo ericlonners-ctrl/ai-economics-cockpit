@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-python3 -m ai_economics_cockpit all --online
+# Static assemble only — no pip/python on Vercel (PEP 668 / uv-managed env).
+# Payload is committed at data/processed/dashboard_payload.json for offline deploys.
 mkdir -p _site
 cp -R dashboard _site/dashboard
 mkdir -p _site/data/processed
 cp data/processed/dashboard_payload.json _site/data/processed/dashboard_payload.json
-cp artifacts/latest_dashboard_build_report.md _site/latest_dashboard_build_report.md
+if [[ -f artifacts/latest_dashboard_build_report.md ]]; then
+  cp artifacts/latest_dashboard_build_report.md _site/latest_dashboard_build_report.md
+fi
 printf %s '<!doctype html><meta http-equiv=refresh content=0;url=/dashboard/>' > _site/index.html

@@ -26,8 +26,23 @@ Manual sample data is ingested for enterprise ROI, model-lab financials, hypersc
 ## Missing Data / Warnings
 
 - missing_required_metric: enterprise_roi ai_spend_to_it_budget - Required metric is missing.
+- stale_metric: enterprise_roi ai_spend_vs_budget - Enterprise sample metric is stale: 111 days old.
+- stale_metric: enterprise_roi measured_roi_coverage - Enterprise sample metric is stale: 111 days old.
+- stale_metric: enterprise_roi measured_ebit_impact_coverage - Enterprise sample metric is stale: 111 days old.
+- stale_metric: enterprise_roi cost_per_accepted_output - Enterprise sample metric is stale: 111 days old.
 - missing_required_metric: token_cost openai_weighted_token_price - Required metric is missing.
 - missing_required_metric: token_cost provider_token_price_index - Required metric is missing.
+- stale_metric: model_lab model_lab_gross_margin - Model lab sample metric is stale: 116 days old.
+- stale_metric: model_lab model_lab_gaap_operating_margin - Model lab sample metric is stale: 116 days old.
+- stale_metric: model_lab cash_burn_to_revenue - Model lab sample metric is stale: 116 days old.
+- stale_metric: hyperscaler_capex capex_to_operating_cash_flow - Hyperscaler sample metric is stale: 156 days old.
+- stale_metric: hyperscaler_capex incremental_ai_revenue_to_cumulative_ai_capex - Hyperscaler sample metric is stale: 156 days old.
+- stale_metric: hyperscaler_capex incremental_ai_gross_profit_to_cumulative_ai_capex - Hyperscaler sample metric is stale: 156 days old.
+- stale_metric: infra_financing gpu_resale_price_index - GPU resale sample metric is stale: 125 days old.
+- stale_metric: infra_financing gpu_rental_rate_index - GPU rental sample metric is stale: 125 days old.
+- stale_metric: infra_financing private_valuation_to_revenue - Private AI sample metric is stale: 125 days old.
+- stale_metric: infra_financing external_financing_dependence - Private AI sample metric is stale: 125 days old.
+- stale_metric: infra_financing ipo_readiness_score - Private AI sample metric is stale: 125 days old.
 - low_confidence_pillar_dominance: enterprise_roi  - C/D metrics account for more than half of available pillar weight.
 - low_confidence_pillar_dominance: hyperscaler_capex  - C/D metrics account for more than half of available pillar weight.
 - low_confidence_pillar_dominance: infra_financing  - C/D metrics account for more than half of available pillar weight.
