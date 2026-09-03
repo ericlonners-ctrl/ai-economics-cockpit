@@ -1,5 +1,5 @@
 async function loadPayload() {
-  const response = await fetch("../data/processed/dashboard_payload.json");
+  const response = await fetch("/data/processed/dashboard_payload.json");
   if (!response.ok) throw new Error("Unable to load dashboard_payload.json");
   return response.json();
 }
