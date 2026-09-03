@@ -1,0 +1,8 @@
+{
+  "name": "ai-economics-cockpit",
+  "private": true,
+  "description": "Static dashboard wrapper so Vercel skips Python entrypoint detection.",
+  "scripts": {
+    "build": "bash scripts/vercel_build.sh"
+  }
+}
