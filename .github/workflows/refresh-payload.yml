@@ -1,0 +1,55 @@
+name: Refresh payload (commit for Vercel)
+
+# Daily online build, committed back so the Vercel static site (which cannot
+# run pip — PEP 668) serves a fresh payload. Commits are authored as the
+# Vercel account owner: on Hobby, deploys from bot-authored commits are BLOCKED.
+on:
+  schedule:
+    - cron: "40 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-payload
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Test
+        run: pytest -q
+
+      - name: Build payload (online)
+        run: python -m ai_economics_cockpit all --online
+
+      - name: Stamp + mirror payload
+        env:
+          PAYLOAD_BUILDER: "github-actions refresh-payload.yml (python -m ai_economics_cockpit all --online)"
+        run: python scripts/stamp_payload.py
+
+      - name: Commit refreshed payload
+        run: |
+          git config user.name "ericlonners-ctrl"
+          git config user.email "ericlonners@gmail.com"
+          git add data/processed/dashboard_payload.json dashboard/data/processed/dashboard_payload.json artifacts/latest_dashboard_build_report.md
+          if git diff --cached --quiet; then
+            echo "no payload changes"
+          else
+            git commit -m "data: refresh payload $(date -u +%Y-%m-%dT%H:%MZ)"
+            git pull --rebase origin main
+            git push
+          fi
