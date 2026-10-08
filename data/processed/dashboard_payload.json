@@ -1,11 +1,11 @@
 {
-  "asof_date": "2026-09-03",
+  "asof_date": "2026-10-08",
   "data_quality": {
-    "average_confidence": 0.52,
-    "data_coverage": 0.7375,
+    "average_confidence": 0.7794,
+    "data_coverage": 0.9375,
     "event_count": 1,
     "low_confidence_metric_count": 15,
-    "metric_count": 15,
+    "metric_count": 49,
     "sample_observation_count": 16
   },
   "event_log": [
@@ -56,11 +56,11 @@
     {
       "condition": "below",
       "id": "token_prices_falling_fast",
-      "latest_value": null,
+      "latest_value": 0.10966666666666666,
       "metric_id": "provider_token_price_index",
       "summary": "Provider token price index falling faster than task intensity would weaken the thesis.",
       "threshold": 85,
-      "triggered": false
+      "triggered": true
     },
     {
       "condition": "above",
@@ -83,7 +83,7 @@
     {
       "condition": "below",
       "id": "capex_to_ocf_stabilising",
-      "latest_value": 52.0,
+      "latest_value": 123.3562740769597,
       "metric_id": "capex_to_operating_cash_flow",
       "summary": "Capex to operating cash flow stabilising below 35% would weaken capex-overbuild stress.",
       "threshold": 35,
@@ -101,7 +101,7 @@
   ],
   "latest_metrics": [
     {
-      "age_days": 111,
+      "age_days": 146,
       "amber_threshold": 110.0,
       "confidence_adjusted_score": 48.75,
       "confidence_grade": "C",
@@ -125,10 +125,10 @@
       "stale": true,
       "unit": "%",
       "value": 125.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 111,
+      "age_days": 146,
       "amber_threshold": 12.0,
       "confidence_adjusted_score": 37.9167,
       "confidence_grade": "C",
@@ -152,10 +152,10 @@
       "stale": true,
       "unit": "USD",
       "value": 15.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 111,
+      "age_days": 146,
       "amber_threshold": 25.0,
       "confidence_adjusted_score": 53.625,
       "confidence_grade": "C",
@@ -179,10 +179,10 @@
       "stale": true,
       "unit": "%",
       "value": 12.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 111,
+      "age_days": 146,
       "amber_threshold": 40.0,
       "confidence_adjusted_score": 42.9,
       "confidence_grade": "C",
@@ -206,10 +206,334 @@
       "stale": true,
       "unit": "%",
       "value": 32.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 156,
+      "age_days": 194,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "AMD",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-03-28T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "amd_sec_filings",
+      "stale": true,
+      "unit": "USD mn",
+      "value": 389.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 191,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 19.5925,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Alphabet",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-03-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 19.5925,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "alphabet_sec_filings",
+      "stale": true,
+      "unit": "USD mn",
+      "value": 35674.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 100,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 42.76,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Amazon",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-06-30T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 42.76,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "amazon_sec_filings",
+      "stale": false,
+      "unit": "USD mn",
+      "value": 54208.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 249,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Broadcom",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-02-01T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "broadcom_sec_filings",
+      "stale": true,
+      "unit": "USD mn",
+      "value": 250.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 191,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Meta",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-03-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "meta_sec_filings",
+      "stale": true,
+      "unit": "USD mn",
+      "value": 18997.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 100,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 96.6233,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Microsoft",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-06-30T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 96.6233,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "microsoft_sec_filings",
+      "stale": false,
+      "unit": "USD mn",
+      "value": 115948.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 165,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "NVIDIA",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-04-26T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "nvidia_sec_filings",
+      "stale": true,
+      "unit": "USD mn",
+      "value": 1757.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 38,
+      "amber_threshold": 60000.0,
+      "confidence_adjusted_score": 10.6237,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Oracle",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 20000.0,
+      "is_estimate": false,
+      "metric_id": "capex",
+      "metric_name": "Total capex",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capital expenditure fact.",
+      "observation_date": "2026-08-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 10.6237,
+      "red_threshold": 120000,
+      "required": false,
+      "source_id": "oracle_sec_filings",
+      "stale": false,
+      "unit": "USD mn",
+      "value": 28499.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 194,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "AMD",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-03-28T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "amd_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 13.1641285956,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 191,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 100.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Alphabet",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-03-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 100.0,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "alphabet_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 77.9078401398,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 100,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 100.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Amazon",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-06-30T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 100.0,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "amazon_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 119.4350805297,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 249,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Broadcom",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-02-01T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "broadcom_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 3.0266343826,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 191,
       "amber_threshold": 45.0,
       "confidence_adjusted_score": 41.6,
       "confidence_grade": "C",
@@ -233,10 +557,334 @@
       "stale": true,
       "unit": "%",
       "value": 52.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 156,
+      "age_days": 191,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 77.8986,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Meta",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-03-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 77.8986,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "meta_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 58.9492955998,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 100,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 86.7642,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Microsoft",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-06-30T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 86.7642,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "microsoft_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 63.3820756006,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 165,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "NVIDIA",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-04-26T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "nvidia_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 3.4899888765,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 38,
+      "amber_threshold": 45.0,
+      "confidence_adjusted_score": 100.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Oracle",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 25.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_operating_cash_flow",
+      "metric_name": "Capex / operating cash flow",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by operating cash flow.",
+      "observation_date": "2026-08-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 100.0,
+      "red_threshold": 70,
+      "required": true,
+      "source_id": "oracle_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 123.356274077,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 194,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 65.1936,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "AMD",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-03-28T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 65.1936,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "amd_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 24.5580808081,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 100,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 82.5965,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Alphabet",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-06-30T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 82.5965,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "alphabet_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 29.7789575612,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 100,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 73.4071,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Amazon",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-06-30T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 73.4071,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "amazon_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 27.0221229674,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 249,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Broadcom",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-02-01T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "broadcom_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 4.5922116091,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 191,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 100.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Meta",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-03-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 100.0,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "meta_sec_filings",
+      "stale": true,
+      "unit": "%",
+      "value": 138.3914912217,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 100,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 100.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Microsoft",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-06-30T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 100.0,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "microsoft_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 581.1055981557,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 74,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "NVIDIA",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-07-26T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 0.0,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "nvidia_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 1.8260047183,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 38,
+      "amber_threshold": 20.0,
+      "confidence_adjusted_score": 100.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Oracle",
+      "estimate_method": "",
+      "frequency": "quarterly",
+      "green_threshold": 10.0,
+      "is_estimate": false,
+      "metric_id": "capex_to_revenue",
+      "metric_name": "Capex / revenue",
+      "metric_weight": 1.0,
+      "notes": "SEC companyfacts capex divided by revenue.",
+      "observation_date": "2026-08-31T00:00:00.000",
+      "pillar": "hyperscaler_capex",
+      "raw_score": 100.0,
+      "red_threshold": 35,
+      "required": false,
+      "source_id": "oracle_sec_filings",
+      "stale": false,
+      "unit": "%",
+      "value": 42.3103760559,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 191,
       "amber_threshold": 6.0,
       "confidence_adjusted_score": 45.5,
       "confidence_grade": "C",
@@ -260,10 +908,10 @@
       "stale": true,
       "unit": "%",
       "value": 4.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 156,
+      "age_days": 191,
       "amber_threshold": 10.0,
       "confidence_adjusted_score": 46.4286,
       "confidence_grade": "C",
@@ -287,10 +935,10 @@
       "stale": true,
       "unit": "%",
       "value": 7.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 125,
+      "age_days": 160,
       "amber_threshold": 50.0,
       "confidence_adjusted_score": 44.6875,
       "confidence_grade": "C",
@@ -314,10 +962,10 @@
       "stale": true,
       "unit": "index",
       "value": 65.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 125,
+      "age_days": 160,
       "amber_threshold": 75.0,
       "confidence_adjusted_score": 27.625,
       "confidence_grade": "C",
@@ -341,10 +989,10 @@
       "stale": true,
       "unit": "index",
       "value": 78.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 125,
+      "age_days": 160,
       "amber_threshold": 75.0,
       "confidence_adjusted_score": 36.4,
       "confidence_grade": "C",
@@ -368,10 +1016,10 @@
       "stale": true,
       "unit": "index",
       "value": 72.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 125,
+      "age_days": 160,
       "amber_threshold": 50.0,
       "confidence_adjusted_score": 37.9167,
       "confidence_grade": "C",
@@ -395,10 +1043,10 @@
       "stale": true,
       "unit": "score",
       "value": 45.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 125,
+      "age_days": 160,
       "amber_threshold": 25.0,
       "confidence_adjusted_score": 41.7857,
       "confidence_grade": "C",
@@ -422,10 +1070,10 @@
       "stale": true,
       "unit": "x",
       "value": 35.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 116,
+      "age_days": 151,
       "amber_threshold": 50.0,
       "confidence_adjusted_score": 43.875,
       "confidence_grade": "C",
@@ -449,10 +1097,10 @@
       "stale": true,
       "unit": "%",
       "value": 85.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 116,
+      "age_days": 151,
       "amber_threshold": -20.0,
       "confidence_adjusted_score": 52.8125,
       "confidence_grade": "C",
@@ -476,10 +1124,10 @@
       "stale": true,
       "unit": "%",
       "value": -45.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
     },
     {
-      "age_days": 116,
+      "age_days": 151,
       "amber_threshold": 35.0,
       "confidence_adjusted_score": 41.6,
       "confidence_grade": "C",
@@ -503,9 +1151,291 @@
       "stale": true,
       "unit": "%",
       "value": 28.0,
-      "vintage": "2026-09-03"
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 6.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Anthropic",
+      "estimate_method": "Mean blended task proxy from curated official price card: 1k input + 500 output.",
+      "frequency": "weekly",
+      "green_threshold": 1.0,
+      "is_estimate": true,
+      "metric_id": "anthropic_weighted_token_price",
+      "metric_name": "Anthropic weighted token price",
+      "metric_weight": 1.0,
+      "notes": "Claude Opus 4.8 official price-card ingestion. Anthropic base input, cache hit, and output price per MTok.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 0.0,
+      "red_threshold": 20,
+      "required": false,
+      "source_id": "anthropic_pricing",
+      "stale": true,
+      "unit": "USD/task proxy",
+      "value": 0.014,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 35.0,
+      "confidence_adjusted_score": 100.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "lower_validates_thesis",
+      "entity": "Provider basket",
+      "estimate_method": "Mean cached-input discount ratio across curated official price-card models.",
+      "frequency": "weekly",
+      "green_threshold": 60.0,
+      "is_estimate": true,
+      "metric_id": "cached_token_discount_index",
+      "metric_name": "Cached token discount index",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 100.0,
+      "red_threshold": 10,
+      "required": false,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "index",
+      "value": 10.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 10.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Provider basket",
+      "estimate_method": "Curated official provider price card; 1k input + 500 output blended proxy.",
+      "frequency": "weekly",
+      "green_threshold": 3.0,
+      "is_estimate": true,
+      "metric_id": "estimated_cost_per_agentic_task",
+      "metric_name": "Estimated cost per task",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 0.0,
+      "red_threshold": 30,
+      "required": false,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "USD",
+      "value": 0.0109666667,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 5.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Google",
+      "estimate_method": "Mean blended task proxy from curated official price card: 1k input + 500 output.",
+      "frequency": "weekly",
+      "green_threshold": 1.0,
+      "is_estimate": true,
+      "metric_id": "google_weighted_token_price",
+      "metric_name": "Google weighted token price",
+      "metric_weight": 1.0,
+      "notes": "Gemini 3.1 Pro official price-card ingestion. Google Gemini paid-tier price for prompts <=200k tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 0.0,
+      "red_threshold": 15,
+      "required": false,
+      "source_id": "google_gemini_pricing",
+      "stale": true,
+      "unit": "USD/task proxy",
+      "value": 0.0039,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 150.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Provider basket",
+      "estimate_method": "Set to neutral until parsed long-context model mix is complete.",
+      "frequency": "weekly",
+      "green_threshold": 100.0,
+      "is_estimate": true,
+      "metric_id": "long_context_cost_index",
+      "metric_name": "Long-context surcharge / context-cost index",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 0.0,
+      "red_threshold": 250,
+      "required": false,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "index",
+      "value": 100.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 5.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "OpenAI",
+      "estimate_method": "Mean blended task proxy from curated official price card: 1k input + 500 output.",
+      "frequency": "weekly",
+      "green_threshold": 1.0,
+      "is_estimate": true,
+      "metric_id": "openai_weighted_token_price",
+      "metric_name": "OpenAI weighted token price",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 0.0,
+      "red_threshold": 15,
+      "required": true,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "USD/task proxy",
+      "value": 0.015,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 4.0,
+      "confidence_adjusted_score": 79.8611,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Provider basket",
+      "estimate_method": "Mean output/input ratio across curated official price-card models.",
+      "frequency": "weekly",
+      "green_threshold": 2.0,
+      "is_estimate": true,
+      "metric_id": "output_to_input_price_ratio",
+      "metric_name": "Output/input price ratio",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 79.8611,
+      "red_threshold": 8,
+      "required": false,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "ratio",
+      "value": 6.3888888889,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 5000.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Provider basket",
+      "estimate_method": "Default task-shape assumption for official-pricing proxy.",
+      "frequency": "weekly",
+      "green_threshold": 1000.0,
+      "is_estimate": true,
+      "metric_id": "output_tokens_per_task",
+      "metric_name": "Output tokens per task",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 0.0,
+      "red_threshold": 20000,
+      "required": false,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "tokens",
+      "value": 500.0,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 110.0,
+      "confidence_adjusted_score": 0.0,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Provider basket",
+      "estimate_method": "Curated official provider price card; 1k input + 500 output blended task proxy indexed x10.",
+      "frequency": "weekly",
+      "green_threshold": 90.0,
+      "is_estimate": true,
+      "metric_id": "provider_token_price_index",
+      "metric_name": "Provider API pricing index",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 0.0,
+      "red_threshold": 150,
+      "required": true,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "index",
+      "value": 0.1096666667,
+      "vintage": "2026-10-08"
+    },
+    {
+      "age_days": 127,
+      "amber_threshold": 2.0,
+      "confidence_adjusted_score": 9.375,
+      "confidence_grade": "A",
+      "confidence_weight": 1.0,
+      "directionality": "higher_validates_thesis",
+      "entity": "Provider basket",
+      "estimate_method": "Conservative placeholder overhead until real task telemetry is added.",
+      "frequency": "weekly",
+      "green_threshold": 1.2,
+      "is_estimate": true,
+      "metric_id": "tool_use_overhead_ratio",
+      "metric_name": "Tool-use / agentic-overhead cost",
+      "metric_weight": 1.0,
+      "notes": "gpt-5.5 official price-card ingestion. OpenAI flagship standard short-context price per 1M tokens.",
+      "observation_date": "2026-06-03T00:00:00.000",
+      "pillar": "token_cost",
+      "raw_score": 9.375,
+      "red_threshold": 4,
+      "required": false,
+      "source_id": "openai_developer_pricing_docs",
+      "stale": true,
+      "unit": "ratio",
+      "value": 1.35,
+      "vintage": "2026-10-08"
     }
   ],
+  "meta": {
+    "asof_date": "2026-10-08",
+    "builder": "github-actions refresh-payload.yml (python -m ai_economics_cockpit all --online)",
+    "cockpit": "ai-economics-cockpit",
+    "generatedAt": "2026-10-08T13:41:52Z",
+    "note": "Manual/sample observations remain labelled via warnings + data_quality; only the build stamp and network-backed sources refresh automatically.",
+    "online_sources": [
+      "official_pricing",
+      "sec_filings"
+    ],
+    "sample_observation_count": 16
+  },
   "metric_catalog": [
     {
       "amber_threshold": 5,
@@ -1462,7 +2392,7 @@
   ],
   "pillar_scores": [
     {
-      "asof_date": "2026-09-03",
+      "asof_date": "2026-10-08",
       "confidence_adjusted_score": 45.7979,
       "data_coverage": 0.75,
       "notes": "",
@@ -1471,16 +2401,16 @@
       "stale_metric_count": 4
     },
     {
-      "asof_date": "2026-09-03",
-      "confidence_adjusted_score": 44.5095,
+      "asof_date": "2026-10-08",
+      "confidence_adjusted_score": 47.7403,
       "data_coverage": 1.0,
       "notes": "",
       "pillar": "hyperscaler_capex",
-      "raw_score": 68.4762,
-      "stale_metric_count": 3
+      "raw_score": 50.4033,
+      "stale_metric_count": 16
     },
     {
-      "asof_date": "2026-09-03",
+      "asof_date": "2026-10-08",
       "confidence_adjusted_score": 37.683,
       "data_coverage": 1.0,
       "notes": "",
@@ -1489,7 +2419,7 @@
       "stale_metric_count": 5
     },
     {
-      "asof_date": "2026-09-03",
+      "asof_date": "2026-10-08",
       "confidence_adjusted_score": 46.0958,
       "data_coverage": 1.0,
       "notes": "",
@@ -1498,13 +2428,13 @@
       "stale_metric_count": 3
     },
     {
-      "asof_date": "2026-09-03",
-      "confidence_adjusted_score": 0.0,
-      "data_coverage": 0.0,
+      "asof_date": "2026-10-08",
+      "confidence_adjusted_score": 18.9236,
+      "data_coverage": 1.0,
       "notes": "",
       "pillar": "token_cost",
-      "raw_score": 0.0,
-      "stale_metric_count": 0
+      "raw_score": 18.9236,
+      "stale_metric_count": 10
     }
   ],
   "source_registry": [
@@ -1809,16 +2739,16 @@
     }
   ],
   "stress_index": {
-    "ai_economic_stress_index": 35.223,
-    "asof_date": "2026-09-03",
-    "average_confidence": 0.52,
-    "data_coverage": 0.7375,
+    "ai_economic_stress_index": 39.6539,
+    "asof_date": "2026-10-08",
+    "average_confidence": 0.7794,
+    "data_coverage": 0.9375,
     "enterprise_roi_score": 45.7979,
-    "hyperscaler_capex_score": 44.5095,
+    "hyperscaler_capex_score": 47.7403,
     "infra_financing_score": 37.683,
     "model_lab_score": 46.0958,
     "notes": "",
-    "token_cost_score": 0.0
+    "token_cost_score": 18.9236
   },
   "time_series": {
     "ai_spend_vs_budget": [
@@ -1829,12 +2759,176 @@
         "value": 125.0
       }
     ],
+    "anthropic_weighted_token_price": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 0.014
+      }
+    ],
+    "cached_token_discount_index": [
+      {
+        "confidence_adjusted_score": 100.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 100.0,
+        "value": 10.0
+      }
+    ],
+    "capex": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-02-01T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 250.0
+      },
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-03-28T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 389.0
+      },
+      {
+        "confidence_adjusted_score": 19.5925,
+        "observation_date": "2026-03-31T00:00:00.000",
+        "raw_score": 19.5925,
+        "value": 35674.0
+      },
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-03-31T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 18997.0
+      },
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-04-26T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 1757.0
+      },
+      {
+        "confidence_adjusted_score": 42.76,
+        "observation_date": "2026-06-30T00:00:00.000",
+        "raw_score": 42.76,
+        "value": 54208.0
+      },
+      {
+        "confidence_adjusted_score": 96.6233,
+        "observation_date": "2026-06-30T00:00:00.000",
+        "raw_score": 96.6233,
+        "value": 115948.0
+      },
+      {
+        "confidence_adjusted_score": 10.6237,
+        "observation_date": "2026-08-31T00:00:00.000",
+        "raw_score": 10.6237,
+        "value": 28499.0
+      }
+    ],
     "capex_to_operating_cash_flow": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-02-01T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 3.0266343826
+      },
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-03-28T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 13.1641285956
+      },
+      {
+        "confidence_adjusted_score": 100.0,
+        "observation_date": "2026-03-31T00:00:00.000",
+        "raw_score": 100.0,
+        "value": 77.9078401398
+      },
       {
         "confidence_adjusted_score": 41.6,
         "observation_date": "2026-03-31T00:00:00.000",
         "raw_score": 64.0,
         "value": 52.0
+      },
+      {
+        "confidence_adjusted_score": 77.8986,
+        "observation_date": "2026-03-31T00:00:00.000",
+        "raw_score": 77.8986,
+        "value": 58.9492955998
+      },
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-04-26T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 3.4899888765
+      },
+      {
+        "confidence_adjusted_score": 100.0,
+        "observation_date": "2026-06-30T00:00:00.000",
+        "raw_score": 100.0,
+        "value": 119.4350805297
+      },
+      {
+        "confidence_adjusted_score": 86.7642,
+        "observation_date": "2026-06-30T00:00:00.000",
+        "raw_score": 86.7642,
+        "value": 63.3820756006
+      },
+      {
+        "confidence_adjusted_score": 100.0,
+        "observation_date": "2026-08-31T00:00:00.000",
+        "raw_score": 100.0,
+        "value": 123.356274077
+      }
+    ],
+    "capex_to_revenue": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-02-01T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 4.5922116091
+      },
+      {
+        "confidence_adjusted_score": 65.1936,
+        "observation_date": "2026-03-28T00:00:00.000",
+        "raw_score": 65.1936,
+        "value": 24.5580808081
+      },
+      {
+        "confidence_adjusted_score": 100.0,
+        "observation_date": "2026-03-31T00:00:00.000",
+        "raw_score": 100.0,
+        "value": 138.3914912217
+      },
+      {
+        "confidence_adjusted_score": 82.5965,
+        "observation_date": "2026-06-30T00:00:00.000",
+        "raw_score": 82.5965,
+        "value": 29.7789575612
+      },
+      {
+        "confidence_adjusted_score": 73.4071,
+        "observation_date": "2026-06-30T00:00:00.000",
+        "raw_score": 73.4071,
+        "value": 27.0221229674
+      },
+      {
+        "confidence_adjusted_score": 100.0,
+        "observation_date": "2026-06-30T00:00:00.000",
+        "raw_score": 100.0,
+        "value": 581.1055981557
+      },
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-07-26T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 1.8260047183
+      },
+      {
+        "confidence_adjusted_score": 100.0,
+        "observation_date": "2026-08-31T00:00:00.000",
+        "raw_score": 100.0,
+        "value": 42.3103760559
       }
     ],
     "cash_burn_to_revenue": [
@@ -1853,12 +2947,28 @@
         "value": 15.0
       }
     ],
+    "estimated_cost_per_agentic_task": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 0.0109666667
+      }
+    ],
     "external_financing_dependence": [
       {
         "confidence_adjusted_score": 44.6875,
         "observation_date": "2026-05-01T00:00:00.000",
         "raw_score": 68.75,
         "value": 65.0
+      }
+    ],
+    "google_weighted_token_price": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 0.0039
       }
     ],
     "gpu_rental_rate_index": [
@@ -1901,6 +3011,14 @@
         "value": 45.0
       }
     ],
+    "long_context_cost_index": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 100.0
+      }
+    ],
     "measured_ebit_impact_coverage": [
       {
         "confidence_adjusted_score": 53.625,
@@ -1933,12 +3051,52 @@
         "value": 28.0
       }
     ],
+    "openai_weighted_token_price": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 0.015
+      }
+    ],
+    "output_to_input_price_ratio": [
+      {
+        "confidence_adjusted_score": 79.8611,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 79.8611,
+        "value": 6.3888888889
+      }
+    ],
+    "output_tokens_per_task": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 500.0
+      }
+    ],
     "private_valuation_to_revenue": [
       {
         "confidence_adjusted_score": 41.7857,
         "observation_date": "2026-05-01T00:00:00.000",
         "raw_score": 64.2857,
         "value": 35.0
+      }
+    ],
+    "provider_token_price_index": [
+      {
+        "confidence_adjusted_score": 0.0,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 0.0,
+        "value": 0.1096666667
+      }
+    ],
+    "tool_use_overhead_ratio": [
+      {
+        "confidence_adjusted_score": 9.375,
+        "observation_date": "2026-06-03T00:00:00.000",
+        "raw_score": 9.375,
+        "value": 1.35
       }
     ]
   },
@@ -1955,7 +3113,7 @@
     {
       "condition": "above",
       "id": "agentic_cost_high",
-      "latest_value": null,
+      "latest_value": 0.010966666666666666,
       "metric_id": "estimated_cost_per_agentic_task",
       "summary": "High cost per agentic task validates hidden token-cost stress.",
       "threshold": 20,
@@ -1981,12 +3139,6 @@
     {
       "message": "C/D metrics account for more than half of available pillar weight.",
       "metric_id": "",
-      "pillar": "hyperscaler_capex",
-      "type": "low_confidence_pillar_dominance"
-    },
-    {
-      "message": "C/D metrics account for more than half of available pillar weight.",
-      "metric_id": "",
       "pillar": "infra_financing",
       "type": "low_confidence_pillar_dominance"
     },
@@ -2003,111 +3155,237 @@
       "type": "missing_required_metric"
     },
     {
-      "message": "Required metric is missing.",
-      "metric_id": "openai_weighted_token_price",
-      "pillar": "token_cost",
-      "type": "missing_required_metric"
-    },
-    {
-      "message": "Required metric is missing.",
-      "metric_id": "provider_token_price_index",
-      "pillar": "token_cost",
-      "type": "missing_required_metric"
-    },
-    {
       "message": "16 sample or placeholder observations are present; replace with source-backed evidence before treating scores as decision-grade.",
       "metric_id": "",
       "pillar": "",
       "type": "sample_data_present"
     },
     {
-      "message": "Enterprise sample metric is stale: 111 days old.",
+      "message": "Enterprise sample metric is stale: 146 days old.",
       "metric_id": "ai_spend_vs_budget",
       "pillar": "enterprise_roi",
       "type": "stale_metric"
     },
     {
-      "message": "Enterprise sample metric is stale: 111 days old.",
+      "message": "Enterprise sample metric is stale: 146 days old.",
       "metric_id": "cost_per_accepted_output",
       "pillar": "enterprise_roi",
       "type": "stale_metric"
     },
     {
-      "message": "Enterprise sample metric is stale: 111 days old.",
+      "message": "Enterprise sample metric is stale: 146 days old.",
       "metric_id": "measured_ebit_impact_coverage",
       "pillar": "enterprise_roi",
       "type": "stale_metric"
     },
     {
-      "message": "Enterprise sample metric is stale: 111 days old.",
+      "message": "Enterprise sample metric is stale: 146 days old.",
       "metric_id": "measured_roi_coverage",
       "pillar": "enterprise_roi",
       "type": "stale_metric"
     },
     {
-      "message": "Hyperscaler sample metric is stale: 156 days old.",
+      "message": "AMD metric is stale: 194 days old.",
+      "metric_id": "capex",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Alphabet metric is stale: 191 days old.",
+      "metric_id": "capex",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Broadcom metric is stale: 249 days old.",
+      "metric_id": "capex",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Meta metric is stale: 191 days old.",
+      "metric_id": "capex",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "NVIDIA metric is stale: 165 days old.",
+      "metric_id": "capex",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "AMD metric is stale: 194 days old.",
       "metric_id": "capex_to_operating_cash_flow",
       "pillar": "hyperscaler_capex",
       "type": "stale_metric"
     },
     {
-      "message": "Hyperscaler sample metric is stale: 156 days old.",
+      "message": "Alphabet metric is stale: 191 days old.",
+      "metric_id": "capex_to_operating_cash_flow",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Broadcom metric is stale: 249 days old.",
+      "metric_id": "capex_to_operating_cash_flow",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Hyperscaler sample metric is stale: 191 days old.",
+      "metric_id": "capex_to_operating_cash_flow",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Meta metric is stale: 191 days old.",
+      "metric_id": "capex_to_operating_cash_flow",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "NVIDIA metric is stale: 165 days old.",
+      "metric_id": "capex_to_operating_cash_flow",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "AMD metric is stale: 194 days old.",
+      "metric_id": "capex_to_revenue",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Broadcom metric is stale: 249 days old.",
+      "metric_id": "capex_to_revenue",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Meta metric is stale: 191 days old.",
+      "metric_id": "capex_to_revenue",
+      "pillar": "hyperscaler_capex",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Hyperscaler sample metric is stale: 191 days old.",
       "metric_id": "incremental_ai_gross_profit_to_cumulative_ai_capex",
       "pillar": "hyperscaler_capex",
       "type": "stale_metric"
     },
     {
-      "message": "Hyperscaler sample metric is stale: 156 days old.",
+      "message": "Hyperscaler sample metric is stale: 191 days old.",
       "metric_id": "incremental_ai_revenue_to_cumulative_ai_capex",
       "pillar": "hyperscaler_capex",
       "type": "stale_metric"
     },
     {
-      "message": "Private AI sample metric is stale: 125 days old.",
+      "message": "Private AI sample metric is stale: 160 days old.",
       "metric_id": "external_financing_dependence",
       "pillar": "infra_financing",
       "type": "stale_metric"
     },
     {
-      "message": "GPU rental sample metric is stale: 125 days old.",
+      "message": "GPU rental sample metric is stale: 160 days old.",
       "metric_id": "gpu_rental_rate_index",
       "pillar": "infra_financing",
       "type": "stale_metric"
     },
     {
-      "message": "GPU resale sample metric is stale: 125 days old.",
+      "message": "GPU resale sample metric is stale: 160 days old.",
       "metric_id": "gpu_resale_price_index",
       "pillar": "infra_financing",
       "type": "stale_metric"
     },
     {
-      "message": "Private AI sample metric is stale: 125 days old.",
+      "message": "Private AI sample metric is stale: 160 days old.",
       "metric_id": "ipo_readiness_score",
       "pillar": "infra_financing",
       "type": "stale_metric"
     },
     {
-      "message": "Private AI sample metric is stale: 125 days old.",
+      "message": "Private AI sample metric is stale: 160 days old.",
       "metric_id": "private_valuation_to_revenue",
       "pillar": "infra_financing",
       "type": "stale_metric"
     },
     {
-      "message": "Model lab sample metric is stale: 116 days old.",
+      "message": "Model lab sample metric is stale: 151 days old.",
       "metric_id": "cash_burn_to_revenue",
       "pillar": "model_lab",
       "type": "stale_metric"
     },
     {
-      "message": "Model lab sample metric is stale: 116 days old.",
+      "message": "Model lab sample metric is stale: 151 days old.",
       "metric_id": "model_lab_gaap_operating_margin",
       "pillar": "model_lab",
       "type": "stale_metric"
     },
     {
-      "message": "Model lab sample metric is stale: 116 days old.",
+      "message": "Model lab sample metric is stale: 151 days old.",
       "metric_id": "model_lab_gross_margin",
       "pillar": "model_lab",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Anthropic metric is stale: 127 days old.",
+      "metric_id": "anthropic_weighted_token_price",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Provider basket metric is stale: 127 days old.",
+      "metric_id": "cached_token_discount_index",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Provider basket metric is stale: 127 days old.",
+      "metric_id": "estimated_cost_per_agentic_task",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Google metric is stale: 127 days old.",
+      "metric_id": "google_weighted_token_price",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Provider basket metric is stale: 127 days old.",
+      "metric_id": "long_context_cost_index",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "OpenAI metric is stale: 127 days old.",
+      "metric_id": "openai_weighted_token_price",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Provider basket metric is stale: 127 days old.",
+      "metric_id": "output_to_input_price_ratio",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Provider basket metric is stale: 127 days old.",
+      "metric_id": "output_tokens_per_task",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Provider basket metric is stale: 127 days old.",
+      "metric_id": "provider_token_price_index",
+      "pillar": "token_cost",
+      "type": "stale_metric"
+    },
+    {
+      "message": "Provider basket metric is stale: 127 days old.",
+      "metric_id": "tool_use_overhead_ratio",
+      "pillar": "token_cost",
       "type": "stale_metric"
     }
   ]
